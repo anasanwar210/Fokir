@@ -1,0 +1,1520 @@
+/*
+=================================================================================================
+                                    Start Global
+=================================================================================================
+*/
+
+  * {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+  }
+
+  .clr {
+    clear: both;
+  }
+
+/*
+=================================================================================================
+                                    End Global
+=================================================================================================
+*/
+
+/*
+=================================================================================================
+                                    Start Header
+=================================================================================================
+*/
+
+  #header {
+    background: url(../images/slider.jpg) no-repeat center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: overlay;
+    height: 100vh;
+  }
+
+  #header .up-nav {
+    background-color: #0004;
+    position: fixed;
+    width: 100%;
+    z-index: 88;
+  }
+
+  #header .nav-bar {
+    width: 73%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  #header .up-nav .nav-bar .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  #header .up-nav .nav-bar .logo a {
+    text-decoration: none;
+    color: #ff305b;
+    font-size: 28px;
+    text-transform: capitalize;
+  }
+
+  #header .up-nav .nav-bar input,
+  #header .up-nav .nav-bar label {
+    position: absolute;
+    top: 6px;
+    right: 6%;
+  }
+
+  #header .up-nav .nav-bar input {
+    display: none;
+  }
+
+  #header .up-nav .nav-bar input:checked ~ .nav-links {
+    display: block;
+  }
+
+  #header .up-nav .nav-bar input:checked ~ label {
+    display: block;
+    width: 45px;
+    height: 45px;
+    padding: 20px;
+    background: url(../images/close.png) no-repeat center;
+    background-size: cover;
+    cursor: pointer;
+  }
+
+  .nav-bar label {
+    display: block;
+    width: 45px;
+    height: 45px;
+    padding: 20px;
+    background: url(../images/open.png) no-repeat center;
+    background-size: cover;
+    cursor: pointer;
+  }
+
+  #header .nav-bar ul {
+    display: flex;
+    list-style: none;
+  }
+
+  #header .nav-bar ul li {
+    padding: 20px 8px;
+    cursor: default;
+  }
+
+  #header .nav-bar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+    -webkit-transition: color 0.3s ease-in-out;
+    -moz-transition: color 0.3s ease-in-out;
+    -ms-transition: color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out;
+  }
+
+  #header .nav-bar ul li:hover a {
+    color: #ff305b;
+    cursor: pointer;
+  }
+
+  #header .header-txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+  }
+
+  #header .header-txt :is(h3 , h1 , p){
+    cursor: default;
+  }
+
+  #header .header-txt h3 {
+    color: #fff;
+    font-size: 25px;
+  }
+
+  #header .header-txt h1 {
+    color: #ff305b;
+    font-size: 60px;
+    margin: 10px 0px;
+    text-transform: uppercase;
+  }
+
+  #header .header-txt p {
+    color: #fff;
+    font-size: 30px;
+  }
+
+
+  /* 
+  #header .header-txt p .one {
+    opacity: 0;
+  }
+
+  #header .header-txt p .two::before {
+    content: "";
+    position: absolute;
+    width: 34%;
+    bottom: 0%;
+    left: 60%;
+    text-align: left;
+    animation: animate infinite 4s;
+    overflow: hidden;
+    -webkit-animation: animate infinite 4s;
+  }
+
+  @keyframes animate {
+    0% {
+      content: "Developer";
+      width: 34%;
+    }
+
+    25% {
+      width: 5.5%;
+    }
+
+    50% {
+      content: "Designer";
+      width: 30%;
+    }
+
+    75% {
+      width: 5.5%;
+    }
+
+    100% {
+      content: "Developer";
+      width: 34%;
+    }
+  } 
+  */
+
+  @media screen and (max-width: 767px) {
+    #header .up-nav {
+      background-color: #333;
+      position: sticky;
+    }
+
+    #header .up-nav .nav-bar {
+      display: block;
+      width: 100%;
+    }
+
+    #header .up-nav .nav-bar .logo {
+      display: flex;
+      margin: auto;
+      width: 95%;
+      padding: 10px;
+    }
+
+    #header .up-nav .nav-bar .logo a {
+      padding: 3px;
+      border-left: 2px solid #ff305b;
+      border-bottom: 2px solid #ff305b;
+    }
+
+    #header .up-nav .nav-bar .nav-links {
+      display: none;
+    }
+
+    #header .up-nav .nav-bar ul {
+      display: block;
+      text-align: center;
+    }
+
+    #header .nav-bar ul li {
+      float: left;
+      width: 100%;
+      text-align: center;
+    }
+
+    #header .nav-bar ul li:last-child {
+      display: none;
+    }
+
+    #header .header-txt h3 {
+      color: #fff;
+      font-size: 25px;
+    }
+
+    #header .header-txt h1 {
+      font-size: 37px;
+    }
+
+    #header .header-txt p {
+      color: #fff;
+      font-size: 20px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    #header .up-nav {
+      background-color: #0004;
+    }
+
+    #header .up-nav .nav-bar {
+      width: 100%;
+      padding: 1% 2%;
+    }
+
+    #header .up-nav .nav-bar label {
+      display: none;
+    }
+
+    #header .header-txt h1 {
+      font-size: 58px;
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    #header .up-nav .nav-bar label {
+      display: none;
+    }
+  }
+
+/*
+=================================================================================================
+                                     End Header
+=================================================================================================
+*/
+
+/*
+=================================================================================================
+                                     Start Hello
+=================================================================================================
+*/
+
+  #hello {
+    padding: 80px 10px;
+  }
+
+  #hello .container {
+    width: 70%;
+    margin: auto;
+    display: flex;
+  }
+
+  #hello .container .parent {
+    width: 40%;
+  }
+
+  #hello .container .parent .brdr {
+    border: 8px solid #0008;
+    width: 83%;
+    height: 433px;
+  }
+
+  #hello .container .parent .brdr .image {
+    position: relative;
+    top: 5%;
+    left: 5%;
+    width: 107%;
+    font-size: 0px;
+    height: 440px;
+    background: url(../images/profile/profile.jpg) no-repeat center;
+    background-size: cover;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+
+  #hello .container .parent .brdr .image img {
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  #hello .container .parent .brdr .image .hvr {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    background-color: #3337;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: top 0.4s;
+    overflow: hidden;
+    -webkit-transition: top 0.4s;
+    -moz-transition: top 0.4s;
+    -ms-transition: top 0.4s;
+    -o-transition: top 0.4s;
+  }
+
+  #hello .container .parent .brdr .image:hover .hvr {
+    top: 0%;
+  }
+
+  #hello .container .parent .brdr .image .hvr a {
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin-left: 5px;
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+
+  #hello .brdr .image .hvr a 
+  :is(.fa-facebook, .fa-twitter, .fa-google, .fa-github)
+  {
+    color: #fff;
+  }
+
+  #hello .brdr .image .hvr a
+  :is(.fa-facebook, .fa-twitter, .fa-google, .fa-github):hover
+  {
+    color: #ff305b !important;
+  }
+
+  #hello .container .parent .brdr .image .hvr div:first-child {
+    margin-left: 0px;
+  }
+
+  #hello .container .hello-txt {
+    width: 55%;
+    margin-top: 3%;
+  }
+
+  #hello .container .hello-txt h4 {
+    color: #333;
+    font-size: 30px;
+    text-transform: uppercase;
+    border-left: 3px solid #ff305b;
+    padding-left: 10px;
+  }
+
+  #hello .container .hello-txt p {
+    color: #555555;
+    margin: 15px 0px 50px;
+    font-size: 18px;
+  }
+
+  #hello .container .hello-txt .dot {
+    border-bottom: 1px dashed #555;
+  }
+
+  #hello .container .hello-txt ul {
+    list-style: none;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #hello .container .hello-txt ul li {
+    display: inline-block;
+    width: 45%;
+    line-height: 40px;
+    font-size: 16px;
+    color: #555;
+  }
+
+  #hello .container .hello-txt ul li span {
+    color: #000;
+    font-weight: bold;
+  }
+
+  #hello .container .hello-txt ul li a {
+    text-decoration: none;
+    color: #555;
+  }
+
+  #hello .container .hello-txt button {
+    text-transform: uppercase;
+    padding: 12px 15px;
+    background-color: #ff305b;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+
+  #hello .container .hello-txt button:hover {
+    background-color: #ec2403;
+  }
+
+  @media screen and (max-width: 767px) {
+    #hello {
+      padding: 10% 3%;
+    }
+
+    #hello .container {
+      width: 100%;
+      display: block;
+    }
+
+    #hello .container .parent {
+      width: 100%;
+    }
+
+    #hello .container .parent .brdr {
+      border: none;
+      width: 100%;
+      background-color: #ff305b;
+    }
+
+    #hello .container .hello-txt {
+      width: 100%;
+    }
+
+    #hello .container .parent .brdr .image {
+      position: relative;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      background-color: #ec2403;
+    }
+
+    #hello .container .hello-txt ul li {
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (min-width: 767px) and (max-width: 992px) {
+    #hello .container {
+      width: 100%;
+    }
+
+    #hello .container .parent {
+      width: 50%;
+    }
+
+    #hello .container .parent .brdr {
+      border: none;
+    }
+
+    #hello .container .hello-txt ul li {
+      font-size: 13px;
+    }
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1200px) {
+    #hello .container {
+      width: 80%;
+    }
+
+    #hello .container .parent {
+      width: 50%;
+    }
+
+    #hello .container .parent .brdr {
+      height: 420px;
+    }
+
+    #hello .container .hello-txt {
+      margin-top: 0%;
+    }
+
+    #hello .container .hello-txt ul li {
+      font-size: 14px;
+    }
+
+    #hello .container .parent .brdr .image {
+      height: 420px;
+    }
+  }
+
+/*
+=================================================================================================
+                                     End Hello
+=================================================================================================
+*/
+
+/*
+=================================================================================================
+                                     Start Services
+=================================================================================================
+*/
+
+  #services {
+    background-color: #f1f1f1;
+    padding: 80px 10px;
+  }
+
+  #services .container {
+    width: 70%;
+    margin: auto;
+  }
+
+  #services .container .services-txt {
+    display: flex;
+    justify-content: center;
+  }
+
+  #services .container .services-txt h2 {
+    color: #333;
+    font-size: 40px;
+  }
+
+  #services .container .lines {
+    width: 13%;
+    height: 1px;
+    margin: 10px auto 25px;
+    background-color: #ff305b;
+    position: relative;
+  }
+
+  #services .container .lines::after {
+    content: "";
+    width: 70%;
+    height: 1px;
+    position: absolute;
+    bottom: 500%;
+    left: 12%;
+    background-color: #ff305b;
+  }
+
+  #services .container .lines::before {
+    content: "";
+    width: 70%;
+    height: 1px;
+    position: absolute;
+    top: 500%;
+    left: 12%;
+    background-color: #ff305b;
+  }
+
+  #services .container .parts {
+    display: flex;
+    text-align: center;
+  }
+
+  #services .container .parts .item {
+    padding: 4% 0.5%;
+    margin-right: 10px;
+    transition: box-shadow 0.3s;
+  }
+
+  #services .container .parts .item:last-child {
+    margin-right: 0px;
+  }
+
+  #services .container .parts .item:hover {
+    background-color: #fff4;
+    box-shadow: 2px 2px 5px 10px #0002, -2px -2px 5px 10px #0002;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+  }
+
+  #services .container .parts .item h3 {
+    font-size: 25px;
+    padding: 10px 0px;
+    cursor: default;
+  }
+
+  #services .container .parts .item p {
+    font-size: 16px;
+    color: #7b7b7b;
+    cursor: default;
+  }
+
+  #services .container .parts .item a 
+  :is(.fa-calendar-check , .fa-dev , .fa-project-diagram , .fa-dice-six){
+    font-size: 2rem;
+    cursor: default;
+    color: #ff305b;
+    transition: transform 0.4s;
+    -webkit-transition: transform 0.4s;
+    -moz-transition: transform 0.4s;
+    -ms-transition: transform 0.4s;
+    -o-transition: transform 0.4s;
+  }
+
+  @media screen and (max-width: 767px) {
+    #services .container {
+      width: 90%;
+    }
+
+    #services .container .lines {
+      width: 25%;
+    }
+
+    #services .container .parts {
+      display: block;
+      width: 70%;
+      margin: auto;
+    }
+
+    #services .container .parts .item {
+      margin: 20px auto;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    #services .container {
+      width: 95%;
+    }
+
+    #services .container .lines {
+      width: 20%;
+    }
+
+    #services .container .parts {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    #services .container .parts .item {
+      margin: 0px;
+      width: 50%;
+    }
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1200px) {
+    #services .container {
+      width: 95%;
+    }
+
+    #services .container .lines {
+      width: 10%;
+    }
+
+    #services .container .parts .item {
+      display: flex;
+      flex-flow: column wrap;
+    }
+  }
+
+/*
+=================================================================================================
+                                     End Services
+=================================================================================================
+*/
+
+/*
+================================================================================================
+                                    Start Portfolio
+================================================================================================
+*/
+
+  #portfolio .container {
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+    padding: 80px 10px;
+  }
+
+  #portfolio .container .portfolio-txt {
+    margin: auto;
+    text-align: center;
+  }
+
+  #portfolio .container .portfolio-txt h2 {
+    color: #333;
+    font-weight: 800px;
+    font-size: 40px;
+    margin: 10px 0px;
+  }
+
+  #portfolio .container .portfolio-txt .lines {
+    width: 13%;
+    height: 1px;
+    margin: 1% auto;
+    background-color: #ff305b;
+    position: relative;
+  }
+
+  #portfolio .container .portfolio-txt .lines::after {
+    content: "";
+    width: 70%;
+    height: 1px;
+    position: absolute;
+    bottom: 500%;
+    left: 12%;
+    background-color: #ff305b;
+  }
+
+  #portfolio .container .portfolio-txt .lines::before {
+    content: "";
+    width: 70%;
+    height: 1px;
+    position: absolute;
+    top: 500%;
+    left: 12%;
+    background-color: #ff305b;
+  }
+
+  #portfolio .container .portfolio-txt ul {
+    list-style: none;
+    padding: 25px 0px;
+    margin: 20px 0px;
+  }
+
+  #portfolio .container .portfolio-txt ul li {
+    display: inline-block;
+    /* background-color: green; */
+  }
+
+  #portfolio .container .portfolio-txt ul li a {
+    padding: 8px 10px;
+    color: #333;
+    font-weight: normal;
+    font-size: 18px;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    /* background-color: blue; */
+  }
+
+  #portfolio .container .portfolio-txt ul li:first-child a {
+    color: #ff305b;
+  }
+
+  #portfolio .container .portfolio-image {
+    float: left;
+    width: 33.3%;
+    font-size: 0px;
+    padding: 10px;
+    /* background-color: blue; */
+  }
+
+  #portfolio .container .portfolio-image .child {
+    position: relative;
+  }
+
+  #portfolio .container .portfolio-image .child img {
+    width: 100%;
+  }
+
+  #portfolio .container .portfolio-image .child div {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: #0004;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  #portfolio .container .portfolio-image .child:hover div {
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 767px) {
+    #portfolio .container {
+      width: 95%;
+    }
+
+    #portfolio .container .portfolio-txt ul li a {
+      padding: 10px 8px;
+      font-size: 16px;
+    }
+
+    #portfolio .container .portfolio-txt .lines {
+      width: 25%;
+    }
+
+    #portfolio .container .portfolio-txt ul li:first-child a {
+      border: 1px solid #ff305b;
+    }
+
+    #portfolio .container .portfolio-image {
+      width: 100%;
+      float: none;
+      padding: 10px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    #portfolio .container {
+      width: 95%;
+    }
+
+    #portfolio .container .portfolio-txt .lines {
+      width: 20%;
+      height: 1px;
+      background-color: #ff305b;
+      position: relative;
+    }
+
+    #portfolio .container .portfolio-image {
+      width: 33.3%;
+      float: left;
+      padding: 10px;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    #portfolio .container .lines {
+      width: 18%;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    #portfolio .container {
+      width: 70%;
+    }
+  }
+
+/*
+================================================================================================
+                                          End Portfolio
+================================================================================================
+*/
+
+/*
+================================================================================================
+                                          Start Counter
+================================================================================================
+*/
+
+  #counter {
+    background-color: #f1f1f1;
+    padding: 80px 10px;
+    overflow: hidden;
+  }
+
+  #counter .container {
+    width: 70%;
+    margin: auto;
+  }
+
+  #counter .container .items {
+    float: left;
+    width: 25%;
+    text-align: center;
+  }
+
+  #counter .container .items a 
+  :is(.fa-user, .fa-file, .fa-cloud-download-alt, .fa-laptop-code)
+  {
+    color: rgb(253, 48, 89 , .4);
+    font-size: 2rem;
+    transition: color .3s;
+    -webkit-transition: color .3s;
+    -moz-transition: color .3s;
+    -ms-transition: color .3s;
+    -o-transition: color .3s;
+  }
+
+  #counter .container .items:hover a
+  :is(.fa-user, .fa-file, .fa-cloud-download-alt, .fa-laptop-code)
+  {
+    color: rgb(253, 48, 89 , 1);
+    font-size: 2rem;
+  }
+
+  #counter .container .items :is(h5, h4) {
+    cursor: default;
+  }
+
+  #counter .container .items h5 {
+    padding: 10px 0px;
+    font-size: 30px;
+  }
+
+  #counter .container .items h4 {
+    font-size: 18px;
+    color: #555555;
+  }
+
+  @media screen and (max-width: 767px) {
+    #counter .container {
+      width: 95%;
+    }
+
+    #counter .container .items {
+      float: none;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    #counter .container .items:last-child {
+      margin-bottom: 0px;
+    }
+
+    #counter .container .items h4 {
+      font-size: 15px;
+      color: #555555;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    #counter .container {
+      width: 95%;
+    }
+
+    #counter .container .items h4 {
+      font-size: 15px;
+      color: #555;
+    }
+  }
+
+/*
+================================================================================================
+                                          End Counter
+================================================================================================
+*/
+
+/*
+=================================================================================================
+                                    Start Feedback
+=================================================================================================
+*/
+
+  #feedback {
+    padding: 80px 10px;
+  }
+
+  #feedback .container {
+    width: 70%;
+    margin: auto;
+  }
+
+  #feedback .container .feedback-txt {
+    text-align: center;
+  }
+
+  #feedback .container .feedback-txt h2 {
+    font-size: 40px;
+  }
+
+  #feedback .container .feedback-txt .lines {
+    width: 13%;
+    height: 1px;
+    margin: 1% auto;
+    background-color: #ff305b;
+    position: relative;
+  }
+
+  #feedback .container .feedback-txt .lines::after {
+    content: "";
+    width: 70%;
+    height: 1px;
+    position: absolute;
+    bottom: 500%;
+    left: 12%;
+    background-color: #ff305b;
+  }
+
+  #feedback .container .feedback-txt .lines::before {
+    content: "";
+    width: 70%;
+    height: 1px;
+    position: absolute;
+    top: 500%;
+    left: 12%;
+    background-color: #ff305b;
+  }
+
+  #feedback .container .catch {
+    position: relative;
+    background-color: #f1f1f1;
+    height: 350px;
+    margin-top: 3%;
+  }
+
+  #feedback .container .catch .triangle {
+    width: 0%;
+    height: 0px;
+    transform: rotateZ(90deg);
+    border-top: 250px solid transparent;
+    border-left: 250px solid #ff305b;
+  }
+
+  #feedback .container .catch .pos {
+    position: absolute;
+    top: 18%;
+    left: 4%;
+    display: flex;
+  }
+
+  #feedback .container .catch .pos .txt {
+    width: 55%;
+    margin-left: 3%;
+  }
+
+  #feedback .container .catch .pos .image img {
+    border-radius: 50%;
+  }
+
+  #feedback .container .catch .pos .txt h4 {
+    font-size: 25px;
+  }
+
+  #feedback .container .catch .pos .txt h6 {
+    font-size: 16px;
+    margin: 10px 0px;
+  }
+
+  #feedback .container .catch .pos .txt p {
+    font-size: 22px;
+    line-height: 30px;
+    color: #555;
+  }
+
+  @media screen and (max-width: 767px) {
+    #feedback .container {
+      width: 95%;
+    }
+
+    #feedback .container .feedback-txt .lines {
+      width: 30%;
+    }
+
+    #feedback .container .catch {
+      border-top: 85px solid #ff305b;
+      height: 500px;
+    }
+
+    #feedback .container .catch .triangle {
+      border: none;
+    }
+
+    #feedback .container .catch .pos {
+      position: absolute;
+      top: -17%;
+      left: 0%;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin: auto;
+    }
+
+    #feedback .container .catch .pos .txt {
+      width: 100%;
+      margin: 0px;
+    }
+  }
+
+  @media screen and (min-width: 767px) and (max-width: 992px) {
+    #feedback .container .catch .triangle {
+      width: 0%;
+      height: 0px;
+      transform: rotateZ(90deg);
+      border-top: 180px solid transparent;
+      border-left: 180px solid #ff305b;
+    }
+
+    #feedback .container .catch .pos {
+      top: 8%;
+    }
+
+    #feedback .container .catch {
+      height: 370px;
+    }
+
+    #feedback .container .catch .pos .txt {
+      width: 100%;
+    }
+
+    #feedback .container .catch .pos .txt p {
+      font-size: 21px;
+    }
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1260px) {
+    #feedback .container .catch .pos .txt {
+      width: 90%;
+    }
+  }
+
+/*
+=================================================================================================
+                                    Start Feedback
+=================================================================================================
+*/
+
+/*
+=================================================================================================
+                                    Start Blog
+=================================================================================================
+*/
+
+  #blog {
+    background-color: #f1f1f1;
+  }
+
+  #blog .container {
+    width: 70%;
+    margin: auto;
+    padding: 80px 10px;
+  }
+
+  #blog .container .blog-txt {
+    text-align: center;
+    font-size: 40px;
+  }
+
+  #blog .container .blog-txt .lines {
+    width: 13%;
+    height: 1px;
+    margin: 1% auto;
+    background-color: #ff305b;
+    position: relative;
+  }
+
+  #blog .container .blog-txt .lines::after {
+    content: "";
+    width: 70%;
+    height: 1px;
+    position: absolute;
+    bottom: 500%;
+    left: 12%;
+    background-color: #ff305b;
+  }
+
+  #blog .container .blog-txt .lines::before {
+    content: "";
+    width: 70%;
+    height: 1px;
+    position: absolute;
+    top: 500%;
+    left: 12%;
+    background-color: #ff305b;
+  }
+
+  #blog .container .parent {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2%;
+  }
+
+  #blog .container .parent .parts {
+    width: 32%;
+    font-size: 0px;
+  }
+
+  #blog .container .parent .parts .image {
+    width: 100%;
+    margin: auto;
+    cursor: pointer;
+  }
+
+  #blog .container .parent .parts .image img {
+    width: 100%;
+  }
+
+  #blog .container .parent .parts .parts-txt {
+    background-color: #fff;
+    padding: 5% 2%;
+  }
+
+  #blog .container .parent .parts .parts-txt h2{
+    color: #000;
+    text-decoration: none;
+    font-size: 21px;
+    cursor: default;
+  }
+
+  #blog .container .parent .parts h5,
+  #blog .container .parent .parts p {
+    font-size: 18px;
+    color: #555 !important;
+    margin-bottom: 16px;
+  }
+
+  #blog .container .parent .parts p {
+    margin-top: 16px;
+    line-height: 21px;
+  }
+
+  #blog .container .parent .parts button {
+    text-transform: uppercase;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #fff;
+  }
+
+  @media screen and (max-width: 767px) {
+    #blog .container {
+      width: 95%;
+    }
+
+    #blog .container .blog-txt .lines {
+      width: 20%;
+    }
+
+    #blog .container .parent {
+      display: flex;
+      flex-direction: column;
+      padding-top: 6%;
+    }
+
+    #blog .container .parent .parts {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+
+  @media screen and (min-width: 767px) and (max-width: 992px) {
+    #blog .container {
+      width: 85%;
+    }
+
+    #blog .container .parent .parts .parts-txt h2 a {
+      font-size: 19px;
+    }
+  }
+
+/*
+=================================================================================================
+                                    Start Blog
+=================================================================================================
+*/
+
+/*
+================================================================================================
+                                          Start Contact
+================================================================================================
+*/
+
+  #contact {
+    padding: 80px 0px;
+  }
+
+  #contact .container {
+    width: 55%;
+    margin: auto;
+  }
+
+  #contact .container .contact-txt {
+    margin: auto;
+    text-align: center;
+  }
+
+  #contact .container .contact-txt h2 {
+    color: #333;
+    font-weight: 800px;
+    font-size: 40px;
+  }
+
+  #contact .container .lines {
+    width: 17%;
+    height: 1px;
+    margin: 1% auto;
+    background-color: #ff305b;
+    position: relative;
+  }
+
+  #contact .container .lines::after {
+    content: "";
+    width: 74%;
+    height: 1px;
+    position: absolute;
+    bottom: 500%;
+    left: 12%;
+    background-color: #ff305b;
+  }
+
+  #contact .container .lines::before {
+    content: "";
+    width: 74%;
+    height: 1px;
+    position: absolute;
+    top: 500%;
+    left: 12%;
+    background-color: #ff305b;
+  }
+
+  #contact .container form {
+    padding: 2% 0%;
+  }
+
+  #contact .container input {
+    padding: 10px 0px 7px 15px;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid #7b7b7b;
+    border-radius: 5px;
+  }
+
+  #contact .container .txt {
+    float: left;
+    width: 50%;
+  }
+
+  #contact .container .txt input[type="text"] {
+    width: 95%;
+  }
+
+  #contact .container .mail {
+    float: right;
+    width: 50%;
+    text-align: right;
+  }
+
+  #contact .container input[type="email"] {
+    width: 95%;
+  }
+
+  #contact .container .sub input[type="text"] {
+    width: 100%;
+    margin: 10px 0px;
+  }
+
+  #contact .container textarea {
+    width: 100%;
+    height: 130px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid #7b7b7b;
+    border-radius: 5px;
+    padding: 10px 0px 7px 15px;
+  }
+
+  #contact .container button {
+    color: #fff;
+    background-color: #ff305b;
+    text-transform: uppercase;
+    outline: none;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 767px) {
+    #contact .container {
+      width: 90%;
+    }
+
+    #contact .container .lines {
+      width: 25%;
+    }
+
+    #contact .container .txt,
+    #contact .container .mail {
+      float: none;
+      width: 100%;
+    }
+
+    #contact .container .txt input[type="text"] {
+      margin-bottom: 10px;
+    }
+
+    #contact .container .txt input[type="text"],
+    #contact .container .mail input[type="email"] {
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    #contact .container .lines {
+      width: 35%;
+    }
+  }
+
+/*
+================================================================================================
+                                          End Contact
+================================================================================================
+*/
+
+/*
+================================================================================================
+                                          Start Footer
+================================================================================================
+*/
+
+  #footer {
+    background-color: #333;
+    padding: 22px 10px;
+  }
+
+  #footer .container {
+    width: 70%;
+    margin: auto;
+  }
+
+  #footer .container .catch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #footer .container .catch .icon {
+    display: flex;
+    margin-bottom: 1%;
+  }
+
+  #footer .container .catch .icon a {
+    width: 45px;
+    height: 45px;
+    background-color: #ff305b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: background-color 0.5s;
+    cursor: pointer;
+    margin-right: 5px;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+  }
+
+  #footer .container .catch .icon a:last-child {
+    margin-right: 0px;
+  }
+
+  #footer .container .catch .icon a:hover {
+    background-color: #ec2403;
+  }
+
+  #footer .container .catch p {
+    color: #fff;
+    font-size: 18px;
+  }
+
+  #footer .container .catch p a {
+    text-decoration: none;
+    color: #ff305b;
+  }
+
+  #footer .container .catch p a:hover {
+    text-decoration: underline;
+  }
+
+  @media screen and (max-width: 767px) {
+    #footer .container {
+      width: 90%;
+    }
+  }
+
+/*
+================================================================================================
+                                          Start Footer
+================================================================================================
+*/
